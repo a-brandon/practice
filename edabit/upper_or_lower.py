@@ -8,5 +8,3 @@ def steps_to_convert(txt: str) -> int:
             upper_count += 1
     if upper_count > lower_count:
         return lower_count
-    else:
-        return upper_count
