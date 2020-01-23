@@ -1,4 +1,4 @@
-def first_before_second(s, first, second):
+def first_before_second(s: string, first: string, second: string) -> bool:
     first_count = s.count(first)
     result = ''
     for letter in s:
