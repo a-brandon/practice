@@ -1,3 +1,6 @@
+from string import ascii_lowercase
+
+
 def print_all_groups():
     result = []
     for i in range(1, 7):
