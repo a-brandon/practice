@@ -1,4 +1,4 @@
-def reverse_odd(txt: string) -> string:
+def reverse_odd(txt: str) -> str:
     result = []
     split_words = txt.split()
     for word in split_words:
