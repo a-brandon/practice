@@ -1,4 +1,4 @@
-def sum_digits(a, b):
+def sum_digits(a: int, b: int) -> int:
     str_cast = (str(i) for i in range(a, b + 1))
     result = []
     for num in str_cast:
