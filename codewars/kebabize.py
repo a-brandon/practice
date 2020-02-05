@@ -9,7 +9,6 @@ def kebabize(sentence: str) -> str:
     
     Returns:
         A kebab-cased string.
-        
     """
     output = ''
     for ch in sentence:
