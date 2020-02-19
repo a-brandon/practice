@@ -1,7 +1,7 @@
 # Sequence: [1, -20, 40, 100, 5, -30, -5, 6, 20, 30]
+
+
 # Solution: 1
-
-
 def minmax(data: list) -> tuple:
     """R-1.3
 
