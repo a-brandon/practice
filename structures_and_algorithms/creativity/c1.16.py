@@ -1,4 +1,4 @@
-"""C1.16
+"""C1-16
 
 In our implementation of the scale function(page 25),
 the body of the loop executes the command data[j] *= factor.
