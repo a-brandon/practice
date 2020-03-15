@@ -8,4 +8,5 @@ def find_palindrome(s):
     for c in punctuation:
         s = s.replace(c, ' ').lower()
     s = ''.join(s.split())
+
     return True if s == s[::-1] else False
