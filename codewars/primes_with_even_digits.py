@@ -1,15 +1,16 @@
+def is_prime(n):
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+
 def f(n):
     nums = {}
 
     for i in range(n - 1, 0, -1):
-        primes = [j for j in range(2, i + 1) if i % j == 0]
-        count = 0
-        if len(primes) == 1:
-            evens = [int(i) for i in list(str(i))]
-            for num in evens:
-                if num in [2, 4, 6, 8, 0]:
-                    count += 1
-            if count >= 1:
-                nums[i] = count
+        if is_prime(i):
+            evens = sum(1 for i in list(str(i)) if i in '2468')
+            if evens >= 1:
+                nums[i] = evens
     return max(nums, key=nums.get)
-
