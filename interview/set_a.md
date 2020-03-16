@@ -54,3 +54,4 @@
 - The last time a customer or co-worker got angry with you. What happened?
 - Tell me a little about yourself.
 - What questions would you like to ask?
+ - [beapythondev](https://beapython.dev/2020/02/02/50-programming-and-python-interview-questions-you-should-know-how-to-answer/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
