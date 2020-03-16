@@ -1,4 +1,4 @@
-Questions taken from: [beapythondev](https://beapython.dev/2020/02/02/50-programming-and-python-interview-questions-you-should-know-how-to-answer/?utm_source=share&utm_medium=ios_app&utm_name=iossmf)
+Questions taken from: [beapythondev](https://beapython.dev/2020/02/02/50-programming-and-python-interview-questions-you-should-know-how-to-answer/?utm_source=share&utm_medium=ios_app&utm_name=iossmf).
 
 # TOP 10 DATA STRUCTURE QUESTIONS
 - What are data structures?
