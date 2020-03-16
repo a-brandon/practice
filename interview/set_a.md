@@ -12,7 +12,7 @@ Questions taken from: [beapythondev](https://beapython.dev/2020/02/02/50-program
 - What are the primary array operations?
 - What is a tree data structure?
 # TOP 10 ALGORITHM QUESTIONS
--How does bubble sort algorithm work?
+- How does bubble sort algorithm work?
 - Write a summary of bubble sort complexity and performance.
 - Which is better between bubble sort and selection sort?
 - Which is better between bubble sort and selection sort?
