@@ -1,4 +1,5 @@
 # TOP 10 DATA STRUCTURE QUESTIONS
+How Many "Prime Numbers" Are There?
 - What are data structures?
 - Why are data structures important?
 - What is hashing?
