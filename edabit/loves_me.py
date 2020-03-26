@@ -1,7 +1,6 @@
 def loves_me(n):
     if n == 1:
         return 'Loves Me'.upper()
-
     phrases = ['Loves me,', 'Loves me not,']
     sentence = ''
     while True:
