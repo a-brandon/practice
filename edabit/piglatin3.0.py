@@ -1,10 +1,7 @@
 def find_vowel_index(word):
-    idx = 0
     for i, c in enumerate(word):
         if c in ('a', 'e', 'i', 'o', 'u'):
-            idx += i
-            break
-    return idx
+            return i
 
 
 def pig_latin_sentence(sentence):
