@@ -1,5 +1,5 @@
 def pop(state):
-    if len(state) == 1 and state == [0]:
+    if state == [0]:
         return state
     balloon = state
     pop_idx = next(i for i in state if i)
