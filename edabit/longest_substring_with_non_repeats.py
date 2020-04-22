@@ -5,9 +5,11 @@ def longest_nonrepeating_substring(txt):
         return txt
 
     subs = []
-    for i, _ in enumerate(txt):
-        for j in range(len(txt)):
-            comp = txt[i:j + 1]
+    for i, c in enumerate(txt):
+        j = 0
+        while j < len(txt):
+            comp = txt[i:j + 3]
             if len(set(comp)) == len(comp):
                 subs.append(comp)
+            j += 1
     return max(subs, key=len)
