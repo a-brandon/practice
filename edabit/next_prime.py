@@ -1,12 +1,15 @@
-def next_prime(num):
-    nums = [i for i in range(2, num + 1) if num % i == 0]
-    if len(nums) == 1:
+def is_prime(n: int) -> bool:
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+
+def next_prime(num:int) -> int:
+    if is_prime(num):
         return num
+
     while True:
-        primes = []
         num += 1
-        for i in range(2, num + 2):
-            if num % i == 0:
-                primes.append(i)
-        if len(primes) == 1:
+        if is_prime(num):
             return num
