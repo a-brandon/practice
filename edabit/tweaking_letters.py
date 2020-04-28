@@ -1,11 +1,7 @@
 from string import ascii_lowercase
 
+
 def tweak_letters(txt, lst):
-    alpha = ascii_lowercase
-    tweaked = ''
-    for i, ch in enumerate(txt):
-        if ch == 'z':
-            tweaked += 'a'
-        else:
-            tweaked += alpha[alpha.index(ch) + lst[i]]
-    return tweaked
+    alpha = ascii_lowercase * 2
+    shift = [alpha[alpha.index(a) + b] for a, b in zip(txt, lst)]
+    return ''.join(shift)
