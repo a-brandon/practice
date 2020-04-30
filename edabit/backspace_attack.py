@@ -1,7 +1,4 @@
 def erase(txt):
-    if txt.count('#') == len(txt):
-        return ''
-
     stack = []
     for c in txt:
         if c != '#':
