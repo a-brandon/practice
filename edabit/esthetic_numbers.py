@@ -1,27 +1,25 @@
-def esthetic(num):
-    digits = '0123456789'
-    x = num
-    nums, bases = [], []
-    base = 10
-    
-    while base > 1:
+def convert_base(num, base):
+    res = []
+    while num > 0:
         rem = num % base
-        nums.append(rem)
+        res.append(str(rem))
         num //= base
+    return list(map(int, res))[::-1]
 
-        if num == 0:
-            res = []
-            while nums:
-                res.append(digits[nums.pop()])
 
-            res = list(map(int, res))
+def esthetic(num):
+    x = num
+    bases = []
+    base = 10
 
-            if all(abs(res[i] - res[i + 1]) == 1 for i, _ in enumerate(res[:-1])):
-                bases.append(base)
-                base -= 1
-                num = x
-            else:
-                base -= 1
-                num = x
+    while base > 1:
+        curr_base = convert_base(num, base)
+        if all(abs(curr_base[i] - curr_base[i + 1]) == 1 for i, _ in enumerate(curr_base[:-1])):
+            bases.append(base)
+            base -= 1
+            num = x
+        else:
+            base -= 1
+            num = x
 
-    return sorted(bases) or 'Anti-Esthetic'
+    return bases[::-1] or 'Anti-Esthetic'
