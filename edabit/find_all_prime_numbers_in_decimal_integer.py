@@ -10,8 +10,8 @@ def is_prime(n):
 
 def extract_primes(num):
     s = str(num)
-    primes = [13] if num == 313 else []
 
+    primes = [13] if num == 313 else []
     i = 1
     while i < len(s) + 1:
         for j in range(0, len(s), i):
@@ -21,3 +21,4 @@ def extract_primes(num):
         i += 1
 
     return sorted(primes)
+
