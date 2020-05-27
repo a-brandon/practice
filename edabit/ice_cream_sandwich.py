@@ -1,17 +1,10 @@
-def get_counts(txt):
-    counts = 0
-    for c in txt:
-        if c == txt[0]:
-            counts += 1
-        else:
-            break
-    return counts
-
-
 def is_icecream_sandwich(txt):
-    s_length = len(txt) >= 3
-    chars = len({ch for ch in txt}) == 2
-    start, end = get_counts(txt), get_counts(txt[::-1])
-    if not all((s_length, chars, start == end)):
+    if len(txt) < 3 or len(set(txt)) == 1:
         return False
-    return True
+    letter_count, letter = 0, txt[0]
+    i = 0
+    while txt[i] == letter:
+        letter_count += 1
+        i += 1
+    s = txt[i:-i]
+    return s == txt[i] * txt.count(txt[i])
