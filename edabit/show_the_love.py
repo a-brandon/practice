@@ -1,12 +1,9 @@
 def show_the_love(lst):
     min_num = min(lst)
-    total = sum(x * 0.25 for x in lst if x != min_num)
-    l = [x - (x * 0.25) if x != min_num else x + total for x in lst]
-    res = []
-    for x in l:
-        if str(x)[2:] == '.0':
-            print(x)
-            res.append(int(x))
-        else:
-            res.append(x)
-    return res
+    lst[lst.index(min_num)] = '_'
+    for i, n in enumerate(lst):
+        if isinstance(n, int):
+            min_num += 0.25 * n
+            lst[i] = n - n * 0.25
+    lst[lst.index('_')] = min_num
+    return lst
