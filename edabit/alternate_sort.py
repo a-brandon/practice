@@ -5,6 +5,3 @@ def alternate_sort(lst):
     for x, y in zip(nums, letters):
         l.extend([x, y])
     return l
-
-
-print(alternate_sort([-2, "f", "A", 0, 100, "z"]))
