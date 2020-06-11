@@ -1,5 +1,6 @@
 def holey_sort(lst):
-    holes = {0: 1, 4: 1, 6: 1, 8: 2, 9: 1}
-    nums = list(map(str, lst))
-    ranks = {x: sum(holes.get(int(n), 0) for n in x) for x in nums}
-    return list(map(int, sorted(ranks, key=ranks.get)))
+    holes = {4: 1, 6: 1, 9: 1, 0: 1, 8: 2}
+    return sorted(lst, key=lambda n: sum(holes.get(int(x), 0) for x in str(n)))
+
+
+print(holey_sort([8, 121, 41, 66]))
