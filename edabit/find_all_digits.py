@@ -1,12 +1,12 @@
 def find_all_digits(nums):
-    nums = [str(num) for num in nums]
-    check = [i for i in range(0, 10)]
-    arr = []
-    for i, elem in enumerate(nums):
-        for num in elem:
-            if int(num) not in arr:
-                arr.append(int(num))
-                arr = sorted(arr)
-                if arr == check:
-                    return int(nums[i])
-    return 'Missing digits!'
+    digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    i = 0
+    while i < len(nums) and digits:
+        curr_num = [int(x) for x in str(nums[i])]
+        for n in curr_num:
+            if n in digits:
+                digits.remove(n)
+        i += 1
+
+    return 'Missing digits!' if digits else nums[i]
