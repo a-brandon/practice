@@ -1,10 +1,9 @@
-def find_missing(arr):
-    if not arr:
-        return False
-    for elem in arr:
-        if not elem:
+def find_missing(lst):
+    if lst:
+        if not all(x for x in lst):
             return False
-    nums = sorted(len(elem) for elem in arr)
-    for i, length in enumerate(nums, start=nums[0]):
-        if i != length:
-            return i
+        nums = sorted(len(l) for l in lst)
+        for i in range(nums[0], nums[-1] + 1):
+            if i not in nums:
+                return i
+    return False
