@@ -1,6 +1,5 @@
 def divide(lst, n):
-    chunks = []
-    res = []
+    chunks, res = [], []
 
     for x in lst:
         chunks.append(x)
