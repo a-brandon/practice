@@ -1,10 +1,17 @@
+def get_factors(n):
+    return sum(1 for i in range(1, n + 1) if n % i == 0)
+
+
 def factor_sort(nums):
-    factor_lengths = {}
-    for x in nums:
-        factors = [i for i in range(1, x + 1) if x % i == 0]
-        factor_lengths[x] = len(factors)
-    dupes = sorted([k for k, v in factor_lengths.items() if v == 2], reverse=True)
-    largest = sorted([k for k, v in factor_lengths.items() if v > 2], reverse=True)
-    if dupes[-1] == min(factor_lengths, key=factor_lengths.get):
-        dupes.pop(-1)
-    return largest + dupes + [min(factor_lengths, key=factor_lengths.get)]
+    factor_map = {n: get_factors(n) for n in nums}
+    vals = sorted(set(factor_map.values()), reverse=True)
+    res, l = [], sorted(nums, reverse=True)
+
+    i = 0
+    while i < len(vals):
+        for x in l:
+            if factor_map.get(x) == vals[i]:
+                res.append(x)
+        i += 1
+
+    return res
