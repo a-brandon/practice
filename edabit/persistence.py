@@ -1,19 +1,17 @@
 def additive_persistence(n):
-    iterations = 0
+    counter = 0
     while len(str(n)) > 1:
-        n = sum(int(i) for i in str(n))
-        iterations += 1
-    return iterations
+        n = sum(map(int, list(str(n))))
+        counter += 1
+    return counter
+
 
 def multiplicative_persistence(n):
-    iterations = 0
-    n = str(n)
-    prod = 1
-    while len(n) > 1:
-        nums = [int(i) for i in n]
-        for num in nums:
-            prod *= num
-        n = str(prod)
+    counter = 0
+    while len(str(n)) > 1:
         prod = 1
-        iterations += 1
-    return iterations
+        for x in str(n):
+            prod *= int(x)
+        counter += 1
+        n = prod
+    return counter
