@@ -8,6 +8,4 @@ class Solution:
             else:
                 evens.append(n)
 
-        sorted_arr = [odds.pop() if i % 2 else evens.pop() for i in range(len(A))]
-
-        return sorted_arr
+        return [odds.pop() if i % 2 else evens.pop() for i in range(len(A))]
