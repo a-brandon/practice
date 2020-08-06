@@ -9,6 +9,6 @@ def equal_count(txt, names):
         d['eqaulity'] = True
     else:
         d['equality'] = 'False'
-        d['difference'] = max(d[s[0]], d[s[1]]) - min(d[s[0]], d[s[1]])
+        d['difference'] = abs(d[s[0]] - d[s[1]])
 
     return d
