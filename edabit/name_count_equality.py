@@ -6,9 +6,9 @@ def equal_count(txt, names):
         d[k] += txt.count(k)
 
     if d[s[0]] == d[s[1]]:
-        d['eqaulity'] = True
+        d['equality'] = True
     else:
-        d['equality'] = 'False'
+        d['equality'] = False
         d['difference'] = abs(d[s[0]] - d[s[1]])
 
     return d
