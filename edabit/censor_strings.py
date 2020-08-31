@@ -1,13 +1,3 @@
 def uncensor(txt, vowels):
-    if len(vowels) == 0:
-        return txt
-    uncensored = ''
-    vowels = list(vowels)
-    while vowels:
-        for c in txt:
-            if c == '*':
-                uncensored += vowels[0]
-                vowels.pop(0)
-            else:
-                uncensored += c
-    return uncensored
+    v = list(vowels)[::-1]
+    return ''.join(v.pop() if c == '*' else c for c in txt)
