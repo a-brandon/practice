@@ -1,5 +1,3 @@
 def get_best_student(grades):
-    student_averages = {}
-    for k, v in grades.items():
-        student_averages[k] = sum(v) / len(v)
-    return max(student_averages, key=student_averages.get)
+    grade_lookup = {name: sum(v) / len(v) for name, v in grades.items()}
+    return max(grade_lookup, key=grade_lookup.get)
