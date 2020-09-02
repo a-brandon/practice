@@ -1,9 +1,10 @@
 def remove_last_vowel(txt):
-    words = txt.split()
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    for i, word in enumerate(words):
-        vowel = max(word.rindex(v) for v in word if v.lower() in vowels or v.upper() in vowels)
-        word = list(word)
-        word[vowel] = ''
-        words[i] = ''.join(word)
-    return ' '.join(words)
+    t = txt.split()
+
+    for i, w in enumerate(t):
+        vowel_idx = max(w.rindex(c) for c in set(w) if c.lower() in 'aeiou')
+        w = list(w)
+        w[vowel_idx] = ''
+        t[i] = ''.join(w)
+
+    return ' '.join(t)
