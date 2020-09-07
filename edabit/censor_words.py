@@ -1,9 +1,2 @@
-def censor_string(txt: str, lst: list, char: str)-> str:
-    split_txt = txt.split()
-    result = []
-    for word in split_txt:
-        if word in lst:
-            result.append(len(word) * char)
-        else:
-            result.append(word)
-    return ' '.join(result)
+def censor_string(txt, lst, char):
+    return ' '.join(char * len(w) if w in lst else w for w in txt.split())
