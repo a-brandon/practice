@@ -1,7 +1,2 @@
 def no_duplicate_letters(phrase):
-    split_phrase = phrase.split()
-    for word in split_phrase:
-        for letter in word:
-            if word.count(letter) == 2:
-                return False
-    return True
+    return False if any(w.count(c) > 1 for w in phrase.lower().split() for c in w) else True
