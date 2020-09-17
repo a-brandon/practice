@@ -1,8 +1,9 @@
 def junction_or_self(n):
-    junctions = []
-    for i in range(n):
-        digits = sum(int(x) for x in str(i))
-        if digits + i == n:
-            junctions.append(i)
-    junctions.sort(reverse=True)
-    return junctions or 'Self'
+    arr = []
+
+    for i in range(1, n):
+        s = sum(int(x) for x in str(i))
+        if i + s == n:
+            arr.append(i)
+
+    return sorted(arr, reverse=True) or 'Self'
