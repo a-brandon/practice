@@ -1,19 +1,15 @@
 def longest_repetition(chars):
     if not chars:
-        return '', 0
+        return ('', 0)
 
-    letters, runs = [chars[0]], []
+    stack, reps = [chars[0]], []
 
-    for ch in chars[1:]:
-        if ch == letters[-1]:
-            letters.append(ch)
+    for c in chars[1:]:
+        if c != stack[-1]:
+            reps.append((stack[0], len(stack)))
+            stack = [c]
         else:
-            runs.append([letters[-1], len(letters)])
-            letters = [ch]
-    runs.append([ch, len(letters)])
+            stack.append(c)
+    reps.append((stack[0], len(stack)))
 
-    m = max(runs, key=lambda r: r[1])[1]
-
-    for x, y in runs:
-        if y == m:
-            return x, y
+    return max(reps, key=lambda t: t[1])
